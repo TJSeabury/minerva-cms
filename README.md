@@ -1,4 +1,4 @@
-# uidd-experiment
+# Minerva CMS
 
 Astro + React starter that uses a **template-first** approach for content editing.
 
