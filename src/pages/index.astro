@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { ArrowRight } from "lucide-react";
+import { Text } from "../components/primitives";
+import { getPageContent } from "../lib/content";
+
+export const prerender = false;
+
+const content = await getPageContent("index");
+---
+
+<BaseLayout title="UIDD Experiment">
+  <section class="space-y-4">
+    <Text
+      name="headline"
+      as="h1"
+      value={content.headline}
+      className="text-4xl font-bold tracking-tight"
+    />
+    <Text
+      name="subhead"
+      as="p"
+      value={content.subhead}
+      className="text-slate-700 max-w-prose"
+    />
+    <div class="pt-2">
+      <a
+        href="/admin"
+        class="inline-flex items-center gap-2 rounded-md bg-slate-900 px-4 py-2 text-white hover:bg-slate-800"
+      >
+        Open Admin
+        <ArrowRight class="h-4 w-4" />
+      </a>
+    </div>
+  </section>
+</BaseLayout>

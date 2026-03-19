@@ -1,0 +1,37 @@
+{
+  "name": "uidd-experiment",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "generate": "tsc -p scripts/tsconfig.generate.json && node --experimental-specifier-resolution=node .tmp-generate/scripts/generate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Astro UI-first / template-driven CMS with Data Primitives",
+  "dependencies": {
+    "@astrojs/node": "^10.0.2",
+    "@astrojs/react": "^5.0.1",
+    "astro": "^6.0.6",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "ts-morph": "^27.0.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@astrojs/compiler": "3.0.1",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

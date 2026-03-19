@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageEditor from "../../components/admin/PageEditor";
+import { getPageContent } from "../../lib/content";
+import { pageFields, type PageId } from "../../lib/generated/pageFields";
+
+export const prerender = false;
+
+const slug = Astro.params.slug as PageId;
+const fields = (pageFields as any)[slug] as any[];
+
+if (!slug || !fields) {
+  return Astro.redirect("/admin");
+}
+
+const initialData = await getPageContent(slug);
+---
+
+<BaseLayout title={`Admin: ${slug}`}>
+  <PageEditor
+    client:only
+    pageId={slug}
+    fields={fields}
+    initialData={initialData as any}
+  />
+</BaseLayout>

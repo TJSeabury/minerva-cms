@@ -1,0 +1,18 @@
+{
+  "heroHeadline": "Test Minerva test test",
+  "heroBody": "Designers build pixel-perfect templates using reusable Data Primitives. Stakeholders edit content safely in the generated admin UI—no schema drift.",
+  "heroCta": {
+    "label": "Get started",
+    "url": "https://example.com",
+    "variant": "primary"
+  },
+  "heroImage": {
+    "url": "https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1200&q=80",
+    "alt": "A modern landing page preview"
+  },
+  "featuresTitle": "Everything stays in sync",
+  "statsLabel": "Template-derived fields",
+  "statsValue": 42,
+  "closingHeadline": "Move fast without losing correctness",
+  "closingBody": "Run `pnpm run generate` whenever templates change. Zod schemas, TypeScript types, and the admin editor update automatically."
+}
